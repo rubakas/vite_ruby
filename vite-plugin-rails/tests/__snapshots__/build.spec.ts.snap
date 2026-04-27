@@ -1,22 +1,62 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`config > generated files 1`] = `
+exports[`config > generated files > files 1`] = `
+[
+  "assets/app-OK6MABcH.css",
+  "assets/app-OK6MABcH.css.br",
+  "assets/app-OK6MABcH.css.gz",
+  "assets/external-BwssHmjP.js",
+  "assets/external-BwssHmjP.js.br",
+  "assets/external-BwssHmjP.js.gz",
+  "assets/external-BwssHmjP.js.map",
+  "assets/index-BXXgj2Kl.js",
+  "assets/index-BXXgj2Kl.js.br",
+  "assets/index-BXXgj2Kl.js.gz",
+  "assets/logo-Bh_XL1Xl.png",
+  "assets/logo-CPmPqqKk.png",
+  "assets/logo-Nuo4H8F_.svg",
+  "assets/logo-Nuo4H8F_.svg.br",
+  "assets/logo-Nuo4H8F_.svg.gz",
+  "assets/main-CIH76yzR.js",
+  "assets/main-CIH76yzR.js.br",
+  "assets/main-CIH76yzR.js.gz",
+  "assets/main-CIH76yzR.js.map",
+  "assets/sassy-D5kz_As0.css",
+  "assets/sassy-D5kz_As0.css.br",
+  "assets/sassy-D5kz_As0.css.gz",
+  "assets/theme-C09nxUps.css",
+  "assets/theme-C09nxUps.css.br",
+  "assets/theme-C09nxUps.css.gz",
+  "assets/vue-DeyQC2IZ.css",
+  "assets/vue-DeyQC2IZ.css.br",
+  "assets/vue-DeyQC2IZ.css.gz",
+  "assets/vue-ljB4LOYg.js",
+  "assets/vue-ljB4LOYg.js.br",
+  "assets/vue-ljB4LOYg.js.gz",
+  "assets/vue-ljB4LOYg.js.map",
+  "index.html",
+  "index.html.br",
+  "index.html.gz",
+]
+`;
+
+exports[`config > generated files > manifest 1`] = `
 {
   "../assets/external.js": {
-    "file": "assets/external.js",
-    "integrity": "<integrity>",
+    "file": "assets/external-BwssHmjP.js",
+    "integrity": "sha384-U9qU8CtmZAV7LLzMBzP9NVBCp+XAYYx03gCzvQZYfQuRJZvsWa1L9wEDoHtYQqVd",
     "isEntry": true,
     "name": "app/assets/external.js",
     "src": "../assets/external.js",
   },
   "../assets/logo.png": {
-    "file": "assets/logo.png",
-    "integrity": "<integrity>",
+    "file": "assets/logo-CPmPqqKk.png",
+    "integrity": "sha384-IGw3tfo4Xt0lp6sO9t5mYtILwfBxDFR8sRCtroxGjhE3r9UxNYgtimkCNzsJU9AP",
     "src": "app/assets/logo.png",
   },
   "../assets/theme.css": {
-    "file": "assets/theme.css",
-    "integrity": "<integrity>",
+    "file": "assets/theme-C09nxUps.css",
+    "integrity": "sha384-gOxt2ZzkwfdFXE6YALyPXRfW9ox13B5dw1j6hciZMSpv4FW117dQCGJYWuX7gHhV",
     "isEntry": true,
     "name": "app/assets/theme.css",
     "names": [
@@ -24,19 +64,19 @@ exports[`config > generated files 1`] = `
     ],
     "src": "../assets/theme.css",
   },
-  "_logo.png": {
-    "file": "assets/logo.png",
-    "integrity": "<integrity>",
-    "src": "_logo.png",
+  "_logo-CPmPqqKk.png": {
+    "file": "assets/logo-CPmPqqKk.png",
+    "integrity": "sha384-IGw3tfo4Xt0lp6sO9t5mYtILwfBxDFR8sRCtroxGjhE3r9UxNYgtimkCNzsJU9AP",
+    "src": "_logo-CPmPqqKk.png",
   },
-  "_logo.svg": {
-    "file": "assets/logo.svg",
-    "integrity": "<integrity>",
-    "src": "_logo.svg",
+  "_logo-Nuo4H8F_.svg": {
+    "file": "assets/logo-Nuo4H8F_.svg",
+    "integrity": "sha384-qQuFPGf9f7DHitjACIjHvY2GwlcFjg+HatTRP3bwG7iAX8MzOW4Sr2dfca6uZlDA",
+    "src": "_logo-Nuo4H8F_.svg",
   },
   "entrypoints/app.css": {
-    "file": "assets/app.css",
-    "integrity": "<integrity>",
+    "file": "assets/app-OK6MABcH.css",
+    "integrity": "sha384-T/ai70rXe9JcUyfq8yDHJEpj5Dfyf5USrp8lFAA6zerwRx6nd3BV/69pA6FhMKv/",
     "isEntry": true,
     "name": "entrypoints/app.css",
     "names": [
@@ -46,31 +86,31 @@ exports[`config > generated files 1`] = `
   },
   "entrypoints/frameworks/vue.js": {
     "css": [
-      "assets/vue.css",
+      "assets/vue-DeyQC2IZ.css",
     ],
-    "file": "assets/vue.js",
-    "integrity": "<integrity>",
+    "file": "assets/vue-ljB4LOYg.js",
+    "integrity": "sha384-jJFry0TB6UFdio68a0DgWCqx6cDXbaCc5vNzvBJqEzTs5/GpiVMC/Hd4yKBAbuYy",
     "isEntry": true,
     "name": "entrypoints/frameworks/vue.js",
     "src": "entrypoints/frameworks/vue.js",
   },
   "entrypoints/main.ts": {
     "css": [
-      "assets/theme.css",
-      "assets/app.css",
+      "assets/theme-C09nxUps.css",
+      "assets/app-OK6MABcH.css",
     ],
-    "file": "assets/main.js",
+    "file": "assets/main-CIH76yzR.js",
     "imports": [
       "entrypoints/frameworks/vue.js",
     ],
-    "integrity": "<integrity>",
+    "integrity": "sha384-frSBklK97GA89RHwhCoy0GRnDvinRCPexGaDJIZoGwTwj+MeDISywZ0lteTW9foa",
     "isEntry": true,
     "name": "entrypoints/main.ts",
     "src": "entrypoints/main.ts",
   },
   "entrypoints/sassy.scss": {
-    "file": "assets/sassy.css",
-    "integrity": "<integrity>",
+    "file": "assets/sassy-D5kz_As0.css",
+    "integrity": "sha384-4tkn835gOI7C29uZzlN/PGxd+XyQTG1/9AHpbWYbYLbgWZ1UmDDBFW1iq43MC70L",
     "isEntry": true,
     "name": "entrypoints/sassy.scss",
     "names": [
@@ -79,29 +119,29 @@ exports[`config > generated files 1`] = `
     "src": "entrypoints/sassy.scss",
   },
   "images/logo.png": {
-    "file": "assets/logo.png",
-    "integrity": "<integrity>",
+    "file": "assets/logo-Bh_XL1Xl.png",
+    "integrity": "sha384-zHCg6OQ1T1xX21KMsW9Bb2ECIIMeec41+3KtT0gygdsrmm/Z5qD5TVtTPhyJNGot",
     "src": "images/logo.png",
   },
   "images/logo.svg": {
-    "file": "assets/logo.svg",
-    "integrity": "<integrity>",
+    "file": "assets/logo-Nuo4H8F_.svg",
+    "integrity": "sha384-qQuFPGf9f7DHitjACIjHvY2GwlcFjg+HatTRP3bwG7iAX8MzOW4Sr2dfca6uZlDA",
     "src": "images/logo.svg",
   },
   "index.html": {
     "assets": [
-      "assets/logo.png",
+      "assets/logo-Bh_XL1Xl.png",
     ],
     "css": [
-      "assets/app.css",
-      "assets/sassy.css",
+      "assets/app-OK6MABcH.css",
+      "assets/sassy-D5kz_As0.css",
     ],
-    "file": "assets/index.js",
+    "file": "assets/index-BXXgj2Kl.js",
     "imports": [
       "entrypoints/main.ts",
       "entrypoints/main.ts",
     ],
-    "integrity": "<integrity>",
+    "integrity": "sha384-0VGDh5KXbD4tDxeyBjVoTpGqxxmsUUqR4QmJAGD/6mIwB2KNrjdwuZ8GkgbvuXGh",
     "isEntry": true,
     "name": "index.html",
     "src": "index.html",
