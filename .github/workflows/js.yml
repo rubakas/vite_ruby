@@ -34,3 +34,14 @@ jobs:
 
       - name: Test
         run: pnpm -C ${{ matrix.package }} test --run
+
+      # TEMPORARY: capture vite-plugin-rails/example build output for cross-platform
+      # hash-drift diagnosis. Remove once root cause is identified.
+      - name: Upload example build (diagnostic)
+        if: matrix.package == 'vite-plugin-rails' && matrix.node == 24
+        uses: actions/upload-artifact@v4
+        with:
+          name: vite-plugin-rails-example-linux
+          path: vite-plugin-rails/example/public/vite/
+          if-no-files-found: error
+          retention-days: 1
