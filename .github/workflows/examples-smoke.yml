@@ -1,0 +1,62 @@
+name: Examples Smoke
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: ${{ matrix.example }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+          - examples/rails
+        # hanami_bookshelf and padrino_blog_tutorial pin vite-plugin-ruby ^3.0.8,
+        # whose package.json shape Rolldown 1.0 rejects. They're upstream's example
+        # apps; leaving them out of smoke until/unless they're modernized.
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'pnpm'
+          cache-dependency-path: ${{ matrix.example }}/pnpm-lock.yaml
+
+      - name: Install example deps
+        working-directory: ${{ matrix.example }}
+        run: pnpm install --frozen-lockfile
+
+      - name: Build with Vite
+        working-directory: ${{ matrix.example }}
+        env:
+          # examples/rails imports '@administrator/timer' from app/frontend/entrypoints/application.ts;
+          # the alias and server.fs.allow are gated on this var. Point at the bundled engine.
+          ADMINISTRATOR_ASSETS_PATH: ${{ github.workspace }}/examples/rails/example_engine/app/frontend
+          NODE_ENV: production
+        run: pnpm exec vite build
+
+      - name: Assert manifest emitted
+        working-directory: ${{ matrix.example }}
+        run: |
+          set -e
+          manifest=$(find public -path '*/.vite/manifest.json' -print -quit)
+          if [ -z "$manifest" ]; then
+            echo "::error::No manifest.json emitted under public/**/.vite/"
+            exit 1
+          fi
+          echo "Found manifest: $manifest"
+          # Sanity: must be valid JSON with at least one entry
+          node -e "
+            const m = require('node:fs').readFileSync(process.argv[1], 'utf8');
+            const parsed = JSON.parse(m);
+            const entries = Object.keys(parsed).length;
+            if (entries === 0) { console.error('manifest is empty'); process.exit(1); }
+            console.log('manifest entries:', entries);
+          " "$manifest"
