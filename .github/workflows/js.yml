@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [20]
+        node: [22, 24]
 
     runs-on: ${{ matrix.os }}
 
@@ -25,10 +25,10 @@ jobs:
           cache: 'pnpm'
           node-version: ${{ matrix.node }}
 
-      - run: pnpm -C vite-plugin-ruby install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm -C vite-plugin-ruby build
+      - name: Build all workspace packages
+        run: pnpm -r build
 
       - name: Test
         run: pnpm -C vite-plugin-ruby test
